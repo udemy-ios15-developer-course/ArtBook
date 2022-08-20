@@ -8,10 +8,12 @@
 import UIKit
 
 class ArtDetails: UIViewController {
-
+    var artName = ""
+    @IBOutlet weak var art: UIImageView!
+    @IBOutlet weak var artYear: UILabel!
+    @IBOutlet weak var artist: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 }

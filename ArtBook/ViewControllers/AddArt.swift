@@ -9,9 +9,14 @@ import UIKit
 
 class AddArt: UIViewController {
 
+    @IBOutlet weak var art: UIImageView!
+    @IBOutlet weak var artName: UITextField!
+    @IBOutlet weak var artist: UITextField!
+    @IBOutlet weak var artYear: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func saveClicked(_ sender: Any) {
     }
 }

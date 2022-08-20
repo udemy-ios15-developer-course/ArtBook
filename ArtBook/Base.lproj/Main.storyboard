@@ -32,6 +32,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="O4e-8O-7g4"/>
                     <connections>
+                        <outlet property="artList" destination="2Mo-kG-yEZ" id="MSs-sP-8u7"/>
                         <segue destination="jvu-Of-H5A" kind="show" identifier="toAddArt" id="BGS-5a-yP0"/>
                         <segue destination="sct-c7-Dvx" kind="show" identifier="toArtDetails" id="DVv-8C-Qtq"/>
                     </connections>
@@ -73,6 +74,9 @@
                                 <rect key="frame" x="178" y="674" width="59" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="jvu-Of-H5A" eventType="touchUpInside" id="gYh-n5-6ve"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CDK-lR-cHw"/>
@@ -91,6 +95,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o4h-z1-GXq"/>
+                    <connections>
+                        <outlet property="art" destination="8yz-Dn-LcL" id="STP-x8-bTs"/>
+                        <outlet property="artName" destination="uuw-Mc-U9u" id="Drp-P6-FgQ"/>
+                        <outlet property="artYear" destination="AJe-9L-fgH" id="8tp-n9-OeS"/>
+                        <outlet property="artist" destination="kYC-5v-Fna" id="hnO-9h-pPw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4a-3b-54r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,6 +145,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BHe-OH-H0f"/>
+                    <connections>
+                        <outlet property="art" destination="Q2m-Qv-BjD" id="hG3-xZ-4I6"/>
+                        <outlet property="artYear" destination="NUb-Pz-Gnv" id="r9w-Gu-uwt"/>
+                        <outlet property="artist" destination="cac-5o-J6r" id="L1J-Hn-1Bj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBW-X9-GBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

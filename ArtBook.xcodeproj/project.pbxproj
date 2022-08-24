@@ -15,6 +15,7 @@
 		E604845428AE0DB000872F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E604845228AE0DB000872F65 /* LaunchScreen.storyboard */; };
 		E64D79A228AE197300B0E41A /* AddArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D79A128AE197300B0E41A /* AddArt.swift */; };
 		E64D79A528AE19AB00B0E41A /* ArtDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D79A428AE19AB00B0E41A /* ArtDetails.swift */; };
+		E6C83D9228B60CA70047B85E /* ArtBookModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6C83D9028B60CA70047B85E /* ArtBookModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E604845528AE0DB000872F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D79A128AE197300B0E41A /* AddArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArt.swift; sourceTree = "<group>"; };
 		E64D79A428AE19AB00B0E41A /* ArtDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetails.swift; sourceTree = "<group>"; };
+		E6C83D9128B60CA70047B85E /* ArtBookModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtBookModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				E604845028AE0DB000872F65 /* Assets.xcassets */,
 				E604845228AE0DB000872F65 /* LaunchScreen.storyboard */,
 				E604845528AE0DB000872F65 /* Info.plist */,
+				E6C83D9028B60CA70047B85E /* ArtBookModel.xcdatamodeld */,
 			);
 			path = ArtBook;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				E64D79A528AE19AB00B0E41A /* ArtDetails.swift in Sources */,
 				E604844C28AE0DAD00872F65 /* MainView.swift in Sources */,
+				E6C83D9228B60CA70047B85E /* ArtBookModel.xcdatamodeld in Sources */,
 				E604844828AE0DAD00872F65 /* AppDelegate.swift in Sources */,
 				E604844A28AE0DAD00872F65 /* SceneDelegate.swift in Sources */,
 				E64D79A228AE197300B0E41A /* AddArt.swift in Sources */,
@@ -374,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E6C83D9028B60CA70047B85E /* ArtBookModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E6C83D9128B60CA70047B85E /* ArtBookModel.xcdatamodel */,
+			);
+			currentVersion = E6C83D9128B60CA70047B85E /* ArtBookModel.xcdatamodel */;
+			path = ArtBookModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E604843C28AE0DAC00872F65 /* Project object */;
 }

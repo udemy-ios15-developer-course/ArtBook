@@ -14,6 +14,10 @@ class MainView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var nameArray = [String]()
     var idArray = [UUID]()
     
+    var selectedPainting = ""
+    var selectedPaintingId : UUID?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonClicked))
@@ -64,9 +68,24 @@ class MainView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toArtDetails" {
+            let destination = segue.destination as! ArtDetails
+            destination.selectedPainting = selectedPainting
+            destination.selectedPaintingId = selectedPaintingId
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPainting = nameArray[indexPath.row]
+        selectedPaintingId = idArray[indexPath.row]
+        performSegue(withIdentifier: "toArtDetails", sender: nil)
+    }
+    
     
     @objc
     private func addButtonClicked() {
+        selectedPainting = ""
         performSegue(withIdentifier: "toAddArt", sender: nil)
     }
 }

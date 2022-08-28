@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ArtDetails: UIViewController {
     var artName = ""
@@ -13,7 +14,17 @@ class ArtDetails: UIViewController {
     @IBOutlet weak var artYear: UILabel!
     @IBOutlet weak var artist: UILabel!
     
+    var selectedPainting = ""
+    var selectedPaintingId : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if selectedPainting == "" {
+            return
+        }
+        
+        let id = selectedPaintingId!.uuidString
+        
     }
 }

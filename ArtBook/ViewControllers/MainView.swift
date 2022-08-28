@@ -81,11 +81,37 @@ class MainView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         selectedPaintingId = idArray[indexPath.row]
         performSegue(withIdentifier: "toArtDetails", sender: nil)
     }
-    
-    
+        
     @objc
     private func addButtonClicked() {
         selectedPainting = ""
         performSegue(withIdentifier: "toAddArt", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+            fetchRequest.returnsObjectsAsFaults = false
+            fetchRequest.predicate = NSPredicate(format: "id=%@", idArray[indexPath.row].uuidString)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if results.count == 0 {
+                    return
+                }
+                
+                let resultObjects = results as! [NSManagedObject]
+                let result = resultObjects[0]
+                context.delete(result)
+                try context.save()
+                nameArray.remove(at: indexPath.row)
+                idArray.remove(at: indexPath.row)
+                self.artList.reloadData()
+            } catch {
+                fatalError("failed to get item")
+            }
+        }
     }
 }

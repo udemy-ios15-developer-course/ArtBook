@@ -16,6 +16,8 @@
 		E64D79A228AE197300B0E41A /* AddArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D79A128AE197300B0E41A /* AddArt.swift */; };
 		E64D79A528AE19AB00B0E41A /* ArtDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D79A428AE19AB00B0E41A /* ArtDetails.swift */; };
 		E6C83D9228B60CA70047B85E /* ArtBookModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6C83D9028B60CA70047B85E /* ArtBookModel.xcdatamodeld */; };
+		E6DBB13F28BBDE2E00BCEBC5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBB13E28BBDE2E00BCEBC5 /* ModelData.swift */; };
+		E6DBB14128BBDE4600BCEBC5 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DBB14028BBDE4600BCEBC5 /* ArtWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E64D79A128AE197300B0E41A /* AddArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArt.swift; sourceTree = "<group>"; };
 		E64D79A428AE19AB00B0E41A /* ArtDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetails.swift; sourceTree = "<group>"; };
 		E6C83D9128B60CA70047B85E /* ArtBookModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtBookModel.xcdatamodel; sourceTree = "<group>"; };
+		E6DBB13E28BBDE2E00BCEBC5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		E6DBB14028BBDE4600BCEBC5 /* ArtWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				E6C83D9028B60CA70047B85E /* ArtBookModel.xcdatamodeld */,
+				E6DBB13E28BBDE2E00BCEBC5 /* ModelData.swift */,
+				E6DBB14028BBDE4600BCEBC5 /* ArtWork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,10 +171,12 @@
 			files = (
 				E64D79A528AE19AB00B0E41A /* ArtDetails.swift in Sources */,
 				E604844C28AE0DAD00872F65 /* MainView.swift in Sources */,
+				E6DBB14128BBDE4600BCEBC5 /* ArtWork.swift in Sources */,
 				E6C83D9228B60CA70047B85E /* ArtBookModel.xcdatamodeld in Sources */,
 				E604844828AE0DAD00872F65 /* AppDelegate.swift in Sources */,
 				E604844A28AE0DAD00872F65 /* SceneDelegate.swift in Sources */,
 				E64D79A228AE197300B0E41A /* AddArt.swift in Sources */,
+				E6DBB13F28BBDE2E00BCEBC5 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

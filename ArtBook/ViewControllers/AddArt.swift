@@ -70,7 +70,7 @@ class AddArt: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             fatalError("Save failed\n\(error)")
         }
         
+        NotificationCenter.default.post(name: NSNotification.Name("newPainting"), object: nil)
         self.navigationController?.popViewController(animated: true)
     }
-    
 }

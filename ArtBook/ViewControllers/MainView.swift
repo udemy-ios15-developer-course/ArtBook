@@ -22,7 +22,10 @@ class MainView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         getData()
     }
     
+    @objc
     func getData() {
+        nameArray.removeAll(keepingCapacity: false)
+        idArray.removeAll(keepingCapacity: false)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -31,9 +34,7 @@ class MainView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         do {
             let results = try context.fetch(fetchRequesst)
-            
             for result in results as! [NSManagedObject] {
-                
                 if let name = result.value(forKey: "name") as? String {
                     self.nameArray.append(name)
                 }
@@ -42,7 +43,6 @@ class MainView: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     self.idArray.append(id)
                 }
             }
-            
         } catch {
             fatalError("Failed to read data\n\(error)")
         }
@@ -50,6 +50,9 @@ class MainView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.artList.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name("newPainting"), object: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return idArray.count

@@ -69,6 +69,8 @@ class AddArt: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         } catch {
             fatalError("Save failed\n\(error)")
         }
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
